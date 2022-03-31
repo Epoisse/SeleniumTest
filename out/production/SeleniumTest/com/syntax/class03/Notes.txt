@@ -1,0 +1,50 @@
+
+Xpath
+is query language which helps us to identify elements uniquely on the webpage
+
+absolute Xpath =>>> starts form the starting node in
+                    html it always starts with single slash /
+
+relative Xpath =>>> starts from any node int the html
+                    it always starts with double slash //
+
+Syntax for relative Xpath:
+//tagname[@attribute = 'attribute value']
+//input[@id = 'email']
+
+Identifying elements by its text:
+//tagname[text() = 'text value']
+//a[text() = 'Create new account']
+
+Identifying elements by using contains method
+//tagname[contains(@attribute, 'partial attribute value')]
+//input[contains(@placeholder, 'Email')]
+
+Starts-with will identify the element with partial starting value
+//tagname[starts-with(@attribute, 'partial starting attribute value')]
+//button[starts-with(@data-testid, 'royal')]
+
+<div> --> division
+<img>--> image
+<h> --> header
+<p> --> paragraph
+<li> --> list
+<ul> --> unordered list
+<ol>--> ordered list
+
+Advanced Xpath
+is based on parent and child, sibling relationship
+
+Identifying elements by following siblings
+//tagname[@attribute = 'attribute value']/following-sibling::tagname
+//input[@id = 'calFromDate']/following-sibling::img
+
+Identifying elements by preceding siblings
+//tagname[@attribute = 'attribute value']/preceding-sibling::tagname
+//span[text() ='& Orders']/preceding-sibling::span
+
+Identifying elements by parents
+//tagname[@attribute = 'attribute value']/parent::a
+
+Identifying elements by it's ancestor
+//tagname[@attribute = 'attribute value']/ancestor::ancestor Tagname

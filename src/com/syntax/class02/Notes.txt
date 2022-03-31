@@ -1,0 +1,50 @@
+
+WebElement
+anything we see on the web page
+e.g. buttons,
+
+HTML
+HyperText Markup Language
+
+DOM
+Stands for Document Object Model. It is the browser's internal view of the webpage
+Also called as Dev Tools
+
+Document
+can be stored any docs such a pdf, exel...
+
+Object
+any line in HTML
+
+Model
+it is just a layout of the HTML
+
+Locator
+is an address or a position of an webelement on the web page
+is used to locate or identify webelements on the web page
+8 locators
+- ID
+- Name
+- TagName
+- Xpath
+- LinkText
+- PartialLinktext
+- CSS classroom
+- Classname
+
+
+HTML Scripting Meaning
+purple -- tags || button,
+brown -- attributes
+
+WebElement Commands:
+consist of several methods where we can perform an action and get the element state
+on the webpage
+
+isEnabled() -- boolean value
+isDisplayed() -- boolean value
+isSelected() -- boolean value
+clear() -- void
+getText() -- String value
+getAttribute() -- String value
+submit() -- void
