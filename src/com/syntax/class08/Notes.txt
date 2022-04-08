@@ -1,0 +1,12 @@
+
+
+Explicit wait or WebDriver Wait:
+is used to tell the webdriver to wait for a certain condition
+before throwing an exception for a specified condition
+
+Explicit wait works with ExpectedConditions class and waits
+until certain conditions are met or the given time is achieved
+
+* sign in xpath is a wild card which can identify any tagname
+//*[contains(text)]
+

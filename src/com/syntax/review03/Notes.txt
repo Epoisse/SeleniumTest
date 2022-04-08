@@ -1,0 +1,15 @@
+
+Alerts:
+Web Based Alerts --> html --> can be threaded as regular page through selenium
+JavaScript Alerts
+Window based Alerts
+
+Frames:
+
+you need to switch to the frame in order to deal with the desired element
+
+for switching you use driver.switchto.frame();
+3 methods
+1. by the index
+2. be the name or ID
+3.

@@ -13,12 +13,12 @@ public class AlertSyntax {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get(url);
-        WebElement alertBox=driver.findElement(By.cssSelector("button[class = 'btn btn-default']"));
-        WebElement confirmBox=driver.findElement(By.cssSelector("button[class = 'btn btn-default btn-lg']"));
-        WebElement promptBox=driver.findElement(By.xpath("//button[text () ='Click for Prompt Box']"));
+        WebElement alertBox = driver.findElement(By.cssSelector("button[class = 'btn btn-default']"));
+        WebElement confirmBox = driver.findElement(By.cssSelector("button[class = 'btn btn-default btn-lg']"));
+        WebElement promptBox = driver.findElement(By.xpath("//button[text () ='Click for Prompt Box']"));
 
         alertBox.click();
-        Alert alert=driver.switchTo().alert();
+        Alert alert = driver.switchTo().alert();
         Thread.sleep(1000);
         alert.accept();
 
@@ -29,12 +29,11 @@ public class AlertSyntax {
 
         promptBox.click();
         Thread.sleep(1000);
-        promptBox.clear();
+        alert.sendKeys("hohoho");
         Thread.sleep(1000);
-        promptBox.sendKeys("usahfiuoo");
         alert.accept();
 
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         driver.quit();
     }
 }

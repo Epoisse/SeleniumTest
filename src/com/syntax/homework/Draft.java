@@ -1,21 +1,46 @@
 package com.syntax.homework;
 
-import java.util.ArrayList;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class Draft {
-    public static void main(String[] args) {
-        ArrayList<String> task187 = new ArrayList<>();
-        task187.add("hi");
-        task187.add("yo");
-        task187.add("sup");
-        task187.add("yolo");
-        task187.add("boop");
+    public static String url = "https://demoqa.com/browser-windows";
 
-        for (int i = 0; i < task187.size(); i += 2) {
-            task187.set(i, null);
+    public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
+        WebDriver driver = new FirefoxDriver();
+        driver.get(url);
+
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+        String mainPageHandle = driver.getWindowHandle();
+
+        driver.findElement(By.cssSelector("button#tabButton")).click();
+        driver.findElement(By.cssSelector("button#windowButton")).click();
+        driver.findElement(By.cssSelector("button#messageWindowButton")).click();
+
+        Set<String> allWindowHandles = driver.getWindowHandles();
+
+        Iterator<String> it = allWindowHandles.iterator();
+        while (it.hasNext()) {
+            String handle = it.next();
+            if (!mainPageHandle.equals(handle)) {
+                driver.switchTo().window(handle);
+                System.out.println("Body Text: " + driver.findElement(By.cssSelector("body")).getText());
+            }
+            if (!driver.getTitle().isEmpty()) {
+                System.out.println("Title: " + driver.getTitle());
+            } else {
+                System.out.println("Title: EMPTY");
+            }
         }
 
-        while(task187.remove(null));{}
-        System.out.println(task187);
+        driver.quit();
     }
 }
+
+
