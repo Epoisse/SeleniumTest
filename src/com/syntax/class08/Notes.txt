@@ -1,6 +1,6 @@
 
-
 Explicit wait or WebDriver Wait:
+
 is used to tell the webdriver to wait for a certain condition
 before throwing an exception for a specified condition
 
@@ -9,4 +9,19 @@ until certain conditions are met or the given time is achieved
 
 * sign in xpath is a wild card which can identify any tagname
 //*[contains(text)]
+
+Fluent wait --> global wait
+it is used to tell the webdriver to wait for certain condition as well as frequency
+before throwing an exception
+
+Implicit wait -- waits to locate the element
+Explicit wait -- waits until certain condition
+Fluent wait -- sets timeouts, polling time an ignores needed exceptions
+
+WebTables
+Webtables are elements on the webpage, which are constructed by having rows and columns
+
+Types of Tables:
+1. Static webtable
+2. Dynamic webtable
 
