@@ -24,4 +24,3 @@ Webtables are elements on the webpage, which are constructed by having rows and 
 Types of Tables:
 1. Static webtable
 2. Dynamic webtable
-

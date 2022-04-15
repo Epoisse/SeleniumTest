@@ -8,38 +8,9 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Draft {
-    public static String url = "https://demoqa.com/browser-windows";
-
-    public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
-        WebDriver driver = new FirefoxDriver();
-        driver.get(url);
-
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-        String mainPageHandle = driver.getWindowHandle();
-
-        driver.findElement(By.cssSelector("button#tabButton")).click();
-        driver.findElement(By.cssSelector("button#windowButton")).click();
-        driver.findElement(By.cssSelector("button#messageWindowButton")).click();
-
-        Set<String> allWindowHandles = driver.getWindowHandles();
-
-        Iterator<String> it = allWindowHandles.iterator();
-        while (it.hasNext()) {
-            String handle = it.next();
-            if (!mainPageHandle.equals(handle)) {
-                driver.switchTo().window(handle);
-                System.out.println("Body Text: " + driver.findElement(By.cssSelector("body")).getText());
-            }
-            if (!driver.getTitle().isEmpty()) {
-                System.out.println("Title: " + driver.getTitle());
-            } else {
-                System.out.println("Title: EMPTY");
-            }
-        }
-
-        driver.quit();
+    public static void main(String[] args) {
+        int num=6;
+        System.out.println(num%=40);
     }
 }
 
