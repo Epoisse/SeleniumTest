@@ -93,14 +93,13 @@ public class HRMCalendar {
 
         WebElement subUnitDD = driver.findElement(By.id("leaveList_cmbSubunit"));
         Select select4 = new Select(subUnitDD);
-
         select4.selectByVisibleText("IT Support");
 
         WebElement searchBtn = driver.findElement(By.id("btnSearch"));
         searchBtn.click();
 
-        TakesScreenshot ts= (TakesScreenshot) driver;
-        File src=ts.getScreenshotAs(OutputType.FILE);
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File src = ts.getScreenshotAs(OutputType.FILE);
 
         try {
             FileUtils.copyFile(src, new File("screenshots/HRM/calendar.png"));

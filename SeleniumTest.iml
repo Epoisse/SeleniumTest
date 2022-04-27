@@ -72,10 +72,10 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/commons-io-2.8.0.jar!/" />
+          <root url="jar://$USER_HOME$/Jars/commons-io-2.8.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

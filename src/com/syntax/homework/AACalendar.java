@@ -33,7 +33,7 @@ public class AACalendar {
             nextBtn = driver.findElement(By.xpath("//a[@data-handler = 'next']"));
         }
 
-        List<WebElement> departDates = driver.findElements(By.xpath("(//table[@class = 'ui-datepicker-calendar'])[1]/tbody/tr/td"));
+        List<WebElement> departDates = driver.findElements(By.xpath("//table[@class = 'ui-datepicker-calendar']//td"));
         for (WebElement depDates :
                 departDates) {
             String depDatesText = depDates.getText();

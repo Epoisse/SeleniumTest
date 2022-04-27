@@ -1,0 +1,16 @@
+
+JavaScriptExecutor
+it is a library in Selenium wich can be executed in different programming language
+(java, c#, python, etc)
+
+is an interface
+
+the last option to use click
+
+Actions:
+-click on the element
+-scroll through the page
+-refresh the page
+-highlight an element
+-scroll to a specific element
+-open a new tab

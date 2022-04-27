@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b749c31-dc67-4a41-8177-00f6443323c5" name="Changes" comment="" />
+    <list default="true" id="1b749c31-dc67-4a41-8177-00f6443323c5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../SeleniumTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SeleniumTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/SeleniumTest/com/syntax/homework/AACalendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../out/production/SeleniumTest/com/syntax/homework/AACalendar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/SeleniumTest/com/syntax/homework/HRMCalendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../out/production/SeleniumTest/com/syntax/homework/HRMCalendar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../screenshots/AA/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../screenshots/AA/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../com/syntax/homework/AACalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../com/syntax/homework/AACalendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../com/syntax/homework/HRMCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../com/syntax/homework/HRMCalendar.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="26o6zHvNzCpxZFRYWef9nKzuIgS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
