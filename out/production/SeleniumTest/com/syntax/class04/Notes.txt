@@ -25,7 +25,7 @@ input[placeholder *= 'Email']
 
 starts-with method in CSS:
  (Circumflex) symbol represents starts with method
- tagname[attribute = 'starting attribute value'
+ tagname[attribute ^= 'starting attribute value']
 
 stupid question. Why do we need CSS selector by ID if we can just use By ID?
 

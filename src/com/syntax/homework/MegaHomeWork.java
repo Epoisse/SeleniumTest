@@ -117,5 +117,10 @@ public class MegaHomeWork {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        //6. Filling out the form
+        WebElement formLink = driver.findElement(By.linkText("Form"));
+        formLink.click();
+
     }
 }
