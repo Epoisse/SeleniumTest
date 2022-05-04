@@ -57,6 +57,21 @@ public class CommonMethods extends BaseClass {
         element.click();
     }
 
+    public static void actionClick(WebElement element) {
+        Actions action = new Actions(driver);
+        action.click(element);
+    }
+
+    public static void selectElementFromTable(List<WebElement> table, String element) {
+        for (WebElement tab :
+                table) {
+            if (tab.getText().equalsIgnoreCase(element)) {
+                tab.click();
+                break;
+            }
+        }
+    }
+
     public static void deleteUserFromTableByName(List<WebElement> tableRows, WebElement deleteConfBtn, String user) {
         for (int i = 0; i < tableRows.size(); i++) {
             if (tableRows.get(i).getText().contains(user)) {
@@ -79,6 +94,12 @@ public class CommonMethods extends BaseClass {
         } else {
             System.out.println("The text is not displayed");
         }
+    }
+
+    public static void verifyingText(WebElement element, String text) {
+        if (element.getText().equals(text)) {
+            System.out.println("text message is verified");
+        } else System.out.println("text message does not match. The text message is: " + element.getText());
     }
 
     public static void selectingRadioBtn(List<WebElement> radios, String buttonText) {
@@ -132,8 +153,8 @@ public class CommonMethods extends BaseClass {
         }
     }
 
-    public static void scrollingToSpecificElement(WebElement element){
-        JavascriptExecutor je=(JavascriptExecutor) driver;
-        je.executeScript("arguments[0].scrollIntoView(true);",element);
+    public static void scrollingToSpecificElement(WebElement element) {
+        JavascriptExecutor je = (JavascriptExecutor) driver;
+        je.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 }

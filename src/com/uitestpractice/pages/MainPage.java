@@ -31,7 +31,7 @@ public class MainPage extends CommonMethods {
     public @FindBy(linkText = "Form")
     WebElement formLink;
 
-    public @FindBy(id = "image_file")
+    public @FindBy(linkText = "Widgets")
     WebElement widgetsLink;
 
     public @FindBy(linkText = "Actions")

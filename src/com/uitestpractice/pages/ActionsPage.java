@@ -1,31 +1,36 @@
 package com.uitestpractice.pages;
 
+import com.uitestpractice.testbase.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class ActionsPage {
+public class ActionsPage extends BaseClass {
 
-    @FindBy(css = "button[onclick ^='myClick']")
+    public @FindBy(css = "button[onclick ^='myClick']")
     WebElement clickMeBtn;
 
-    @FindBy(css = "button[name *='dbl']")
+    public @FindBy(css = "button[name *='dbl']")
     WebElement doublClickMeBtn;
 
     //drag and drop block
 
-    @FindBy(id = "draggable")
+    public @FindBy(id = "draggable")
     WebElement draggable;
 
-    @FindBy(id = "droppable")
+    public @FindBy(id = "droppable")
     WebElement droppable;
 
-    @FindBy(id = "div2")
+    public @FindBy(id = "div2")
     WebElement droppable2;
 
     //table of selectable numbers
-    @FindBy(xpath = "//ol[@id ='selectable']/li")
-    List <WebElement> numbersTable;
+    public @FindBy(xpath = "//ol[@id ='selectable']/li")
+    List<WebElement> numbersTable;
 
+    public ActionsPage(){
+        PageFactory.initElements(driver, this);
+    }
 }

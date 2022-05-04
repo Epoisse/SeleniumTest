@@ -1,13 +1,22 @@
 package com.uitestpractice.pages;
 
+import com.uitestpractice.testbase.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class WidgetsPage {
+public class WidgetsPage extends BaseClass {
 
-    @FindBy (xpath = "//input[@type='file']")
+    public @FindBy(xpath = "//input[@type='file']")
     WebElement chooseFileBtn;
 
-    @FindBy (xpath = "//input[@value='Upload']")
+    public @FindBy(xpath = "//input[@value='Upload']")
     WebElement uploadBtn;
+
+    public @FindBy(css = "div.ContactUs")
+    WebElement confirmationMsg;
+
+    public WidgetsPage() {
+        PageFactory.initElements(driver, this);
+    }
 }
