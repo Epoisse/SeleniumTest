@@ -14,6 +14,7 @@ public class AjaxPageTest {
         AjaxPage ajaxPage = new AjaxPage();
         BaseClass.driver.manage().window().maximize();
         CommonMethods.click(mainPage.ajaxMenuLink);
+
         CommonMethods.click(ajaxPage.ajaxInnerLink);
         CommonMethods.explicitWaitElementIsPresent(ajaxPage.getAjaxLinkText);
         CommonMethods.verifyingTextIsPresent(ajaxPage.getAjaxLinkText);

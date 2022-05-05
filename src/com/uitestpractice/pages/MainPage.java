@@ -43,7 +43,7 @@ public class MainPage extends CommonMethods {
     public @FindBy(linkText = "Select")
     WebElement selectLink;
 
-    public MainPage(){
+    public MainPage() {
         PageFactory.initElements(driver, this);
     }
 

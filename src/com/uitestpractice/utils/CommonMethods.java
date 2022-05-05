@@ -10,7 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 public class CommonMethods extends BaseClass {
 
@@ -38,6 +40,12 @@ public class CommonMethods extends BaseClass {
 
     public static void switchToAlertAndAccept() {
         driver.switchTo().alert().accept();
+    }
+
+    public static void promptAlertSendkeysAndAccept(String text) {
+        Alert alert = driver.switchTo().alert();
+        alert.sendKeys(text);
+        alert.accept();
     }
 
     public static void switchToSpecificIframe(int iframe) {
@@ -69,6 +77,15 @@ public class CommonMethods extends BaseClass {
                 tab.click();
                 break;
             }
+        }
+    }
+
+    public static void selectAllElementsFromTable(WebElement element, List<WebElement> table) {
+        for (WebElement tab :
+                table) {
+            CommonMethods.scrollingToBottom();
+            element.click();
+            tab.click();
         }
     }
 
@@ -138,6 +155,18 @@ public class CommonMethods extends BaseClass {
         select.selectByVisibleText(country);
     }
 
+    public static void selectingAllOptionsMultiDD(WebElement dd) {
+        Select select = new Select(dd);
+        List<WebElement> options = select.getOptions();
+        for (WebElement option :
+                options) {
+            String optionText = option.getText();
+            select.selectByVisibleText(optionText);
+        }
+        select.deselectByIndex(2);
+        select.deselectAll();
+    }
+
     public static void dataPickerSelection(WebElement monthDD, WebElement yearDD, List<WebElement> dates, String month, String year, String date) {
         Select select = new Select(monthDD);
         select.selectByVisibleText(month);
@@ -156,5 +185,24 @@ public class CommonMethods extends BaseClass {
     public static void scrollingToSpecificElement(WebElement element) {
         JavascriptExecutor je = (JavascriptExecutor) driver;
         je.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public static void scrollingToBottom() {
+        JavascriptExecutor je = (JavascriptExecutor) driver;
+        je.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+    }
+
+    public static void windowHandling() {
+        Set<String> windowHandles = driver.getWindowHandles();
+        Iterator<String> iterator = windowHandles.iterator();
+        String mainWindow = null;
+        String childWindow = null;
+        while (iterator.hasNext()) {
+            mainWindow = iterator.next();
+            childWindow = iterator.next();
+        }
+        driver.switchTo().window(childWindow);
+        driver.close();
+        driver.switchTo().window(mainWindow);
     }
 }

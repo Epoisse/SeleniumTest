@@ -1,37 +1,48 @@
 package com.uitestpractice.pages;
 
+import com.uitestpractice.testbase.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class SwitchToPage {
+public class SwitchToPage extends BaseClass {
 
-    public static int iFrame=1;
+    public static int iFrame = 0;
 
     //Alerts
-    @FindBy(id = "alert")
+    public @FindBy(id = "alert")
     WebElement alertBtn;
 
-    @FindBy(id = "confirm")
+    public @FindBy(id = "confirm")
     WebElement confirmBtn;
 
-    @FindBy(id = "prompt")
+    public @FindBy(id = "prompt")
     WebElement promptBtn;
 
-    @FindBy(xpath = "//button[@data-target ='#myModal']")
+    public @FindBy(xpath = "//button[@data-target ='#myModal']")
     WebElement launchModalBtn;
 
-    @FindBy(id = "basicAuthentication")
+    public @FindBy(xpath = "//button[text()='Ok']")
+    WebElement modalAlertOkBtn;
+
+    public @FindBy(id = "basicAuthentication")
     WebElement authenticationBtn;
 
+    public @FindBy(id = "demo")
+    WebElement alertMessage;
+
     //iFrame
-    @FindBy(id = "name")
+    public @FindBy(id = "name")
     WebElement nameBox;
 
     //window links
-    @FindBy(linkText = "uitestpractice.com")
+    public @FindBy(linkText = "uitestpractice.com")
     WebElement siteLink;
 
-    @FindBy(partialLinkText = "new window")
+    public @FindBy(partialLinkText = "new window")
     WebElement newWindowLink;
 
+    public SwitchToPage() {
+        PageFactory.initElements(driver, this);
+    }
 }

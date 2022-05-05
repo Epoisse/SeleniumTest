@@ -9,8 +9,8 @@ public class HomePageTest {
     public static void main(String[] args) {
         BaseClass.openWebpageWithUrl("http://www.uitestpractice.com/");
 
-        MainPage mainPage=new MainPage();
-        HomePage homePage=new HomePage();
+        MainPage mainPage = new MainPage();
+        HomePage homePage = new HomePage();
         CommonMethods.click(mainPage.homeLink);
 
         CommonMethods.deleteUserFromTableByName(homePage.rows, homePage.deleteConfirmationBtn, "Alan");

@@ -30,7 +30,7 @@ public class ActionsPage extends BaseClass {
     public @FindBy(xpath = "//ol[@id ='selectable']/li")
     List<WebElement> numbersTable;
 
-    public ActionsPage(){
+    public ActionsPage() {
         PageFactory.initElements(driver, this);
     }
 }
